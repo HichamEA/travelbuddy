@@ -1,4 +1,4 @@
-<% provide(:title, 'News') %>
+<% provide(:title, @user.name) %>
 
 <div id="loading"></div>
 
@@ -9,12 +9,13 @@
 	<div id="handle"></div>
 	<div id="closeBox"></div>
 	
-	<h2 class="entrytitle">News</h2>
+	<h2 class="entrytitle">Show</h2>
 	
 	<!--BREADCRUMBS-->
-	<div id="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <span class="current">News</span></div>
-    <h1>News</h1>
+	<div id="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <span class="current">Show</span></div>
+    <h1><%= @user.name %></h1>
    </div>
   </div>
   </div>
   
+

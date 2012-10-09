@@ -1,7 +1,6 @@
 Travelbuddy::Application.routes.draw do
   
-  get "users/new"
-
+  resources :users
   root to: 'static_pages#home'
   match '/signup', to: 'Users#new'
   #get "static_pages/help"
