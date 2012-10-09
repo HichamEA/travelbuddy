@@ -1,0 +1,31 @@
+<!--Start header-->
+<div id="header">
+	
+	<!--LOGO-->
+	<!--<%= link_to "The Navigator" ,'/' %><%= image_tag('images/logo.png',:alt=>"logo") %> -->
+	<a id="logo" href="/"><img src="images/logo.png" alt="TravelBuddy" /></a> 
+	<!--DESCRIPTION-->
+	<!--NAVIGATION MENU-->
+	<div id="navigation">
+		<ul id="dropmenu" class="menu">
+			<!--CURRENT MENU ITEM (class name = current-menu-item)-->	
+			<ul class="sub-menu">
+				<li><a href="#">Africa</a></li>
+				<li><a href="#">Asia</a></li>
+				<li><a href="#">Australia</a></li>
+				<li><a href="#">Europe</a></li>
+				<li><a href="#">North America</a></li>
+				<li><a href="#">South America</a></li>
+				<li><a href="#">View All</a></li>
+			</ul>
+			</li>
+			<li><%= link_to "Sign Up", signup_path %></li>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "About", about_path %></li>
+			<li><%= link_to "Contact", contact_path %></li>
+			<li><%= link_to "Help", help_path %></li>
+			<li><%= link_to "News", news_path %></li> 
+			
+		</ul>
+	</div>
+</div><!--end header-->
