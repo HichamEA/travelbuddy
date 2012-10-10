@@ -1,14 +1,13 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, 'Edit User') %>
 <div id="loading"></div>
 
 <div id="contentContainer">
 <div id="content">
 
-<h1>Sign up</h1>
+<h1>Update Your Profile</h1>
+	<%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
 
-    <%= form_for(@user) do |f| %>
-	  <%= render 'shared/error_messages' %>
-	  
       <%= f.label :name %>
       <%= f.text_field :name %>
 		<br />
@@ -20,11 +19,8 @@
 		<br />
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
-      
-      <%= f.submit "Create my account" %>
+		<br />
+      <%= f.submit "Save changes" %>
     <% end %>
   </div>
 </div>
-
-
-
