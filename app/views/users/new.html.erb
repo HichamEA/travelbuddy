@@ -3,28 +3,78 @@
 
 <div id="contentContainer">
 <div id="content">
+<div id="main">
+	<div id="handle"></div>
+	<div id="closeBox"></div>
+	
+	<h2 class="entrytitle">Sign Up</h2>
+	
+	<div id="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <span class="current">Sign Up</span></div>	
+	<div class="entry">
 
-<h1>Sign up</h1>
 
     <%= form_for(@user) do |f| %>
-	  <%= render 'shared/error_messages' %>
-	  
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-		<br />
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-		<br />
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-		<br />
-      <%= f.label :password_confirmation, "Confirm Password" %>
-      <%= f.password_field :password_confirmation %>
-      
-      <%= f.submit "Create my account" %>
+    <%= render 'shared/error_messages', object: f.object %>ss
+	  <%= render 'fields', f: f %>
+      <p><%= f.submit "Create my account" %></p>
     <% end %>
   </div>
 </div>
 
+<script type="text/javascript">
+//FULL SCREEN IMAGE
+jQuery.noConflict(); jQuery(document).ready(function(){jQuery.backstretch("images/thumbs/blog.jpg", {speed: 150});});
+</script>
 
+<div id="sidebar">
+<ul>
+<!--WIDGET 1-->
+<li class="widget">
+	<h2 class="widgettitle">Sponsors</h2>			
+	<a href="http://themeforest.net/user/themolitor/portfolio?ref=themolitor">
+		<img src="http://www.lakewaparks.com/wp/wp-content/uploads/2011/07/tf_260x120.gif" alt="ThemeForest" />
+	</a>
+</li><!--end widget-->
 
+<!--WIDGET 2-->
+<li class="widget">
+	<h2 class="widgettitle">Text Widget</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis aliquet commodo. Sed consequat lorem a quam fermentum auctor. Donec quis nisi mi. In vel justo sem, quis iaculis tellus. Sed molestie imperdiet sapien, sed adipiscing tellus imperdiet at. Donec id orci sed elit eleifend luctus.</p>
+</li><!--end widget-->
+
+<!--WIDGET 3-->
+<li class="widget">
+	<h2 class="widgettitle">Tags</h2>
+	<div class="tagcloud">
+		<a href='#'>Africa</a>
+		<a href='#'>All</a>
+		<a href='#'>Argentina</a>
+		<a href='#'>Arizona</a>
+		<a href='#'>Asia</a>
+		<a href='#'>Australia</a>
+		<a href='#'>Brazil</a>
+		<a href='#'>China</a>
+		<a href='#'>Egypt</a>
+		<a href='#'>England</a>
+		<a href='#'>Europe</a>
+		<a href='#'>France</a>
+		<a href='#'>India</a>
+		<a href='#'>Italy</a>
+		<a href='#'>Mexico</a>
+		<a href='#'>New York</a>
+		<a href='#'>North Africa</a>
+		<a href='#'>North America</a>
+		<a href='#'>Paris</a>
+		<a href='#'>Rome</a>
+		<a href='#'>South America</a>
+		<a href='#'>UK</a>
+		<a href='#'>US</a>
+	</div>
+</li><!--end widget-->
+</ul>
+<div class="clear"></div>
+</div><!--end sidebar-->
+
+<div class="clear"></div>
+</div><!--end content-->
+</div><!--end contentContainer-->

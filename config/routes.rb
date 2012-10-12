@@ -2,12 +2,15 @@ Travelbuddy::Application.routes.draw do
   
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
 
   root to: 'static_pages#home'
   
   match '/signup', to: 'Users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+  #get "log_out" => "sessions#destroy", :as => "log_out"
+  #get "signout" => "sessions#destroy", :as => "signout", via: :delete
   #get "static_pages/help"
   # get "static_pages/about"
   # get "static_pages/contact"
